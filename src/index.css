@@ -1,0 +1,50 @@
+@import "tailwindcss";
+
+@theme {
+  /* আপনার দেওয়া কালার টোকেনগুলো টেলউইন্ডের ম্যাপড ভেরিয়েবলে কনভার্ট করা হলো */
+  --color-dark-bg: var(--color-zinc-950);
+  --color-dark-card: var(--color-zinc-900);
+  --color-dark-border: var(--color-zinc-800);
+  
+  --color-light-bg: var(--color-zinc-50);
+  --color-light-card: var(--color-white);
+  --color-light-border: var(--color-zinc-200);
+
+  --color-primary: var(--color-emerald-500);
+  --color-primary-hover: var(--color-emerald-600);
+  
+  --color-secondary: var(--color-zinc-800);
+  --color-secondary-hover: var(--color-zinc-700);
+  
+  --color-alert: var(--color-red-500);
+}
+
+/* গলোবাল বডি কালার অ্যাসাইন */
+@utility app-body {
+  background-color: var(--color-light-bg);
+  color: var(--color-zinc-900);
+}
+
+@variant dark (&:where(.dark, .dark *));
+
+html {
+  background-color: var(--color-light-bg);
+  color: var(--color-zinc-900);
+  transition: background-color 0.2s, color 0.2s;
+}
+
+html.dark {
+  background-color: var(--color-dark-bg);
+  color: var(--color-zinc-50);
+}
+
+
+.prose-mini p, .prose-mini div {
+  display: inline;
+}
+.prose-mini * {
+  font-size: inherit !important;
+  color: inherit !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
