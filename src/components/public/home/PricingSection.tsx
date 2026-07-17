@@ -1,5 +1,5 @@
 import { useState } from "react"
-import { Check, Sparkles, HelpCircle } from "lucide-react"
+import { Check, Sparkles } from "lucide-react"
 import Button from "@/components/ui/Button"
 
 type PricingPlan = {
